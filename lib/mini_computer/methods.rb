@@ -66,41 +66,44 @@ def getInput
 	clear
 	log("Hello, I am your computer. What would you like to do?\n(For a list of commands you can say help)\n> ".green)
 	input = gets.chomp.downcase
-	if input == "math" 
-		doMath
-	elsif input == "time"
-		showTime
-	elsif input == "tips"
-		tipCalc
-	elsif input == "help"
-		help!	
-	elsif input == "setup"
-		setup
-	elsif input == "helloworld"
-		clear
-		puts "hello, world" * 10000
-		pause
-		clear
-	elsif input == "austin"
-		easterEgg
-	elsif input == "josh"
-		josh
-	elsif input == "say"
-		print "What would you like to say?\n> "
-		text = gets
-		say(text)
-	elsif input == "todo"
-		clear
-		todo
-	elsif input == "about"
-		about
-	elsif input == "quit"
-		quit
-	elsif input == "clear"
-		clear
-	else
-		log("Sorry, that is an invalid input. Please try again.\nPress return".red)
-		pause
+	case input
+		when "math" 
+			doMath
+		when "time"
+			showTime
+		when "tips"
+			tipCalc
+		when "help"
+			help!	
+		when "setup"
+			setup
+		when "helloworld"
+			clear
+			puts "hello, world" * 10000
+			pause
+			clear
+		when "austin"
+			easterEgg
+		when "josh"
+			josh
+		when "say"
+			print "What would you like to say?\n> "
+			text = gets
+			say(text)
+		when "todo"
+			clear
+			todo
+		when "error"
+			error
+		when "about"
+			about
+		when "quit"
+			quit
+		when "clear"
+			clear
+		else
+			log("Sorry, that is an invalid input. Please try again.\nPress return".red)
+			pause
 	end
 end
 
@@ -221,8 +224,9 @@ def quit
 	Process.exit(0)
 end
 
-
-
+def error
+	log("◼︎" * 10000)
+end
 
 
 
