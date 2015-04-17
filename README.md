@@ -1,10 +1,15 @@
 # MiniComputer
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mini_computer`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is just a simple (so far) application that I am developing to do random things as I learn more with Ruby. 
 
-TODO: Delete this and the text above, and describe your gem
+Feel free to do whatever you want to, with - and while thinking about - this application. 
+
+Critique is always welcomed. You can email me at austingates16@gmail.com, or find me on Twitter. @ausgates
 
 ## Installation
+
+$ git clone https://github.com/ausgates/mini_computer
+
 
 Add this line to your application's Gemfile:
 
@@ -22,7 +27,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Do what you please with this. It's probably not going to be usefull to anyone.
 
 ## Development
 
@@ -32,7 +37,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/mini_computer/fork )
+1. Fork it ( https://github.com/ausgates/mini_computer/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

@@ -1,5 +1,6 @@
 # Methods
 require_relative './tips.rb'
+require_relative './todo.rb'
 require 'colorize'
 
 #Makes the cool typing effect
@@ -66,7 +67,6 @@ def getInput
 	input = gets.chomp.downcase
 	if input == "math" 
 		doMath
-
 	elsif input == "time"
 		showTime
 	elsif input == "tips"
@@ -88,6 +88,9 @@ def getInput
 		print "What would you like to say?\n> "
 		text = gets
 		say(text)
+	elsif input == "todo"
+		clear
+		todo
 	elsif input == "about"
 		about
 	elsif input == "quit"
@@ -96,7 +99,7 @@ def getInput
 	elsif input == "clear"
 		clear
 	else
-		log("Sorry, that is an invalid input. Please try again.\n".red)
+		log("Sorry, that is an invalid input. Please try again.\nPress return".red)
 		pause
 	end
 end
