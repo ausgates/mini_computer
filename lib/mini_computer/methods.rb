@@ -61,7 +61,7 @@ def doMath
 end
 end
 
-#Gets user input, defines user commands
+#Gets user input, defines some user commands
 def getInput
 	clear
 	log("Hello, I am your computer. What would you like to do?\n(For a list of commands you can say help)\n> ".green)

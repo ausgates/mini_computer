@@ -3,7 +3,7 @@ require 'colorize'
 #methods
 #To-do list application. Not finished yet.
 def todo
-	input = gets.chomp.downcase
+	input = STDIN
 	 while input != "quit"
 		clear
 		vr
@@ -40,6 +40,7 @@ def todo_new_item
 	item = Todo.new(title, date, time)
 	puts "New item created:\t\t #{item.title}"
 	puts "Completion date:\t\t #{item.date}"
+	puts "Entered on:\t\t #{item.time}"
 end
 
 def help_td
