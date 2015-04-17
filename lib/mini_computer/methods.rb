@@ -1,6 +1,7 @@
 # Methods
 require_relative './tips.rb'
 require_relative './todo.rb'
+require_relative './version.rb'
 require 'colorize'
 
 #Makes the cool typing effect
@@ -94,8 +95,7 @@ def getInput
 	elsif input == "about"
 		about
 	elsif input == "quit"
-		clear
-		Process.exit(0)
+		quit
 	elsif input == "clear"
 		clear
 	else
@@ -107,7 +107,9 @@ end
 #Help command
 def help! 
 	clear
-	puts "\n\nYou can say\n\tMath\tA basic calculator\n\tTime\tShows the time\n\ttips\tOpen a tip calculator\n\tsay\tthe computer says what you type, now in blue!\n\tclear\tClears the screen\n\tquit\tQuits the program\nPress any key to continue...\n\n"
+	vr
+	puts "You can say\n\n\n\tMath\tA basic calculator\n\tTime\tShows the time\n\ttips\tOpen a tip calculator\n\tsay\tthe computer says what you type, now in blue!\n\ttodo\ta simple todo list applications\n\tclear\tClears the screen\n\tquit\tQuits the program\n\n\n\n\n\n\n\n\n\n\nPress any key to continue...\n\n"
+	vr
 	pause
 end
 
@@ -123,7 +125,7 @@ end
 
 #Just for fun
 def easterEgg 
-	puts "\n────────█████─────────────█████\n
+	log("\n────────█████─────────────█████\n
 ────████████████───────████████████\n
 ──████▓▓▓▓▓▓▓▓▓▓██───███▓▓▓▓▓▓▓▓▓████\n
 ─███▓▓▓▓▓▓▓▓▓▓▓▓▓██─██▓▓▓▓▓▓▓▓▓▓▓▓▓███\n
@@ -186,7 +188,7 @@ def easterEgg
 ───────────────███▓▓▓███\n
 ─────────────────██▓██\n
 ──────────────────███\n
-"
+")
 pause
 clear
 end
@@ -202,7 +204,7 @@ end
 #Tells you about this program
 def about
 	clear
-	puts "This program was written by Austin Gates.\nYou can find this program at http://github.com/ausgates/everything\nThank you."
+	puts "This program was written by Austin Gates.\nVersion: #{MiniComputer::VERSION}\nYou can find this program at http://github.com/ausgates/mini_computer\nThank you."
 	pause
 end
 
@@ -214,6 +216,10 @@ def josh
 	clear
 end
 
+def quit
+	clear
+	Process.exit(0)
+end
 
 
 

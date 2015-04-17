@@ -13,4 +13,5 @@ def tipCalc
 	print "The tip amount is #{tip}.\n"
 	print "Your total is #{total}.\n"
 	vr
+	pause
 end

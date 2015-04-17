@@ -22,8 +22,7 @@ def todo
 				clear
 				getInput
 			when "quit"
-				clear
-				Process.exit(0)
+				quit
 			else 
 				puts "Sorry, that is an invalid input. Please try again...\nPress return".red
 		end
